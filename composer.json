@@ -1,0 +1,22 @@
+{
+    "name": "jillevdw/telescope-app",
+    "description": "Exposes Laravel Telescope data for use in the Telescope mobile app.",
+    "type": "library",
+    "require": {
+        "laravel/telescope": "^3.5"
+
+    },
+    "autoload": {
+        "psr-4": {
+            "JillevdW\\TelescopeApp\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "JillevdW\\TelescopeApp\\TelescopeAppServiceProvider"
+            ]
+        }
+    },
+    "license": "MIT"
+}
