@@ -12,6 +12,9 @@ class TelescopeAppServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->loadRoutesFrom(__DIR__.'/routes/api.php');
+        $this->loadRoutesFrom(__DIR__.'/routes/web.php');
+
+        $this->loadViewsFrom(__DIR__.'/views', 'telescope-app');
     }
 
     /**
@@ -21,6 +24,6 @@ class TelescopeAppServiceProvider extends ServiceProvider
     */
     public function register()
     {
-
+        $this->mergeConfigFrom(__DIR__.'/config/telescope-app.php', 'telescope-app');
     }
 }
